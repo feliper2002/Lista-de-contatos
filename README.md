@@ -6,5 +6,4 @@ Aplicação que simula uma lista de contatos. Os contatos são gerados de forma 
 
 ## Screenshots
 
-<img src="screenshots/screenshot_1.png" width=230/>
-<img src="screenshots/screenshot_2.png" width=230/>
+<img src="screenshots/screenshot_1.png" width=230/> <img src="screenshots/screenshot_2.png" width=230/>
