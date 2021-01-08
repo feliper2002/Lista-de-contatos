@@ -10,11 +10,12 @@ class ContactModel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    User usuario = user[index];
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          title: Text(user[index].nome, style: contactNameAppBar),
+          title: Text(usuario.nome, style: contactNameAppBar),
         ),
         body: Center(
           child: Container(
@@ -24,7 +25,7 @@ class ContactModel extends StatelessWidget {
                   radius: 120,
                 ),
                 SizedBox(height: 20),
-                Text(user[index].nome, style: contactNameAppBar),
+                Text(usuario.nome, style: contactNameAppBar),
                 SizedBox(height: 10),
                 Container(
                   height: MediaQuery.of(context).size.height / 1.98,
@@ -38,23 +39,23 @@ class ContactModel extends StatelessWidget {
                       child: Column(
                         children: [
                           ListTile(
-                            title: Text(user[index].telefone),
+                            title: Text(usuario.telefone),
                             subtitle: Text('Mobile | Estado'),
                           ),
                           ListTile(
                             title: Text('Email'),
-                            subtitle: Text(user[index].email),
+                            subtitle: Text(usuario.email),
                           ),
                           Divider(thickness: 1.5),
                           ListTile(
                             title: Text('Nascimento'),
                             subtitle: Text(DateFormat('d MMM y')
-                                .format(user[index].nascimento)
+                                .format(usuario.nascimento)
                                 .toString()),
                           ),
                           ListTile(
                             title: Text('Peso'),
-                            subtitle: Text(user[index].peso.toString() + ' Kg'),
+                            subtitle: Text(usuario.peso.toString() + ' Kg'),
                           ),
                         ],
                       ),
