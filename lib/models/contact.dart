@@ -1,5 +1,5 @@
-import 'package:atividade/styles/textStyle.dart';
-import 'package:atividade/utils/user.dart';
+import 'package:lista_de_contatos/styles/textStyle.dart';
+import 'package:lista_de_contatos/utils/user.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

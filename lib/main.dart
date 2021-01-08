@@ -1,5 +1,5 @@
-import 'package:atividade/pages/home.dart';
-import 'package:atividade/styles/themeScheme.dart';
+import 'package:lista_de_contatos/pages/home.dart';
+import 'package:lista_de_contatos/styles/themeScheme.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(InitApp());

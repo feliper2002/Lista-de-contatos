@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:atividade/utils/user.dart';
+import 'package:lista_de_contatos/utils/user.dart';
 
 class ContatoService {
   int max = 50;

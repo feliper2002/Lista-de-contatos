@@ -1,5 +1,5 @@
-name: atividade
-description: A new Flutter project.
+name: lista_de_contatos
+description: Aplicação que simula uma lista de contatos. Os contatos são gerados de forma aleatória, bem como suas informações, que podem ser visualizadas com mais detalhes ao clicar no contato específico.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `pub publish`. This is preferred for private packages.
