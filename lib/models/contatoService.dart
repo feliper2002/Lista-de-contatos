@@ -1,8 +1,9 @@
 import 'dart:math';
 
-import 'package:lista_de_contatos/utils/user.dart';
+import 'package:lista_de_contatos/models/user.dart';
 
 class ContatoService {
+  var rdn = Random();
   int max = 50;
   var nome = ['Mário', 'Luigi', 'Wario', 'Peach', 'Filipe'];
   var sobreNome = ['Dias', 'Fernandes', 'Castro', 'Souza', 'Deschamps'];
@@ -30,29 +31,26 @@ class ContatoService {
     DateTime.now(),
   ];
 
-  var idade = [20, 15, 18, 35, 25, 19, 22, 45, 23, 34];
-  var peso = [55, 78, 90, 98, 110, 50, 45, 52, 75, 62, 35];
+  int nasc(int min, int max) => min + rdn.nextInt(max - min);
 
   List<User> userList = [];
+
   List<User> getAll() {
     for (int i = 0; i < max; i++) {
-      var nomeCompleto = nome[Random().nextInt(nome.length)] +
-          ' ' +
-          sobreNome[Random().nextInt(sobreNome.length)];
+      var primeiroNome = nome[rdn.nextInt(nome.length)];
+      var sobrenome = sobreNome[rdn.nextInt(sobreNome.length)];
+      var aniversario = aniversarios[rdn.nextInt(aniversarios.length)];
+      var idade = rdn.nextInt(90);
       User usuario = new User(
-        nome: nomeCompleto,
-        telefone: telefones[Random().nextInt(telefones.length)],
-        email: emails[Random().nextInt(emails.length)],
-        nascimento: aniversarios[Random().nextInt(aniversarios.length)],
-        peso: peso[Random().nextInt(peso.length)],
+        nome: '$primeiroNome $sobrenome',
+        idade: idade,
+        telefone: telefones[rdn.nextInt(telefones.length)],
+        email: emails[rdn.nextInt(emails.length)],
+        dataNascimento: aniversario,
+        peso: rdn.nextInt(100),
       );
       userList.add(usuario);
     }
     return userList;
   }
 }
-
-// main() {
-//   ContatoService contatList = new ContatoService();
-//   contatList.getAll();
-// }

@@ -1,6 +1,6 @@
-import 'package:lista_de_contatos/models/contact.dart';
-import 'package:lista_de_contatos/utils/contatoService.dart';
-import 'package:lista_de_contatos/utils/user.dart';
+import 'package:lista_de_contatos/pages/contact.dart';
+import 'package:lista_de_contatos/models/contatoService.dart';
+import 'package:lista_de_contatos/models/user.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

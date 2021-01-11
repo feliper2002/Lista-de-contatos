@@ -1,5 +1,5 @@
 import 'package:lista_de_contatos/styles/textStyle.dart';
-import 'package:lista_de_contatos/utils/user.dart';
+import 'package:lista_de_contatos/models/user.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -50,7 +50,7 @@ class ContactModel extends StatelessWidget {
                           ListTile(
                             title: Text('Nascimento'),
                             subtitle: Text(DateFormat('d MMM y')
-                                .format(usuario.nascimento)
+                                .format(usuario.dataNascimento)
                                 .toString()),
                           ),
                           ListTile(
