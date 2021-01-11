@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:lista_de_contatos/pages/contact.dart';
 import 'package:lista_de_contatos/models/contatoService.dart';
 import 'package:lista_de_contatos/models/user.dart';
@@ -13,13 +15,6 @@ class _HomeAppState extends State<HomeApp> {
   ContatoService ctn = ContatoService();
   List<User> contatos = [];
 
-  // openContact(List<User> contatos, int index) {
-  //   Navigator.push(
-  //     context,
-  //     MaterialPageRoute(builder: (context) => ContactModel(contatos, index)),
-  //   );
-  // }
-
   @override
   void initState() {
     super.initState();
@@ -34,7 +29,7 @@ class _HomeAppState extends State<HomeApp> {
           child: ListView.builder(
             itemCount: contatos.length,
             itemBuilder: (_, index) {
-              return InkWell(
+              return ListTile(
                 onTap: () {
                   Navigator.push(
                     context,
@@ -42,14 +37,12 @@ class _HomeAppState extends State<HomeApp> {
                         builder: (context) => ContactModel(contatos, index)),
                   );
                 },
-                child: ListTile(
-                  leading: CircleAvatar(
-                    radius: 24,
-                    backgroundColor: Colors.grey[400],
-                  ),
-                  title: Text(contatos[index].nome),
-                  subtitle: Text(contatos[index].telefone),
+                leading: CircleAvatar(
+                  radius: 24,
+                  backgroundColor: Colors.grey[400],
                 ),
+                title: Text(contatos[index].nome),
+                subtitle: Text(contatos[index].telefone),
               );
             },
           ),
@@ -58,25 +51,3 @@ class _HomeAppState extends State<HomeApp> {
     );
   }
 }
-
-// InkWell(
-//                 highlightColor: Colors.blue[300],
-//                 onTap: () {},
-//                 child: Card(
-//                   elevation: 3,
-//                   child: ListTile(
-//                     leading: CircleAvatar(
-//                       radius: 30,
-//                       backgroundColor: Colors.grey,
-//                     ),
-//                     tileColor: Colors.white,
-//                     title: Text(
-//                       contatos[index].nome,
-//                       style: TextStyle(
-//                         color: Colors.black,
-//                       ),
-//                     ),
-//                     subtitle: Text(contatos[index].telefone),
-//                   ),
-//                 ),
-//               )
