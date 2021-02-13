@@ -1,3 +1,4 @@
+import 'package:lista_de_contatos/pages/contact.dart';
 import 'package:lista_de_contatos/pages/home.dart';
 import 'package:lista_de_contatos/styles/themeScheme.dart';
 import 'package:flutter/material.dart';

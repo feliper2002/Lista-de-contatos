@@ -1,10 +1,9 @@
-import 'dart:math';
-
 import 'package:lista_de_contatos/pages/contact.dart';
 import 'package:lista_de_contatos/models/contatoService.dart';
 import 'package:lista_de_contatos/models/user.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:lista_de_contatos/styles/textStyle.dart';
 
 class HomeApp extends StatefulWidget {
   @override
@@ -34,10 +33,17 @@ class _HomeAppState extends State<HomeApp> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => ContactModel(contatos, index)),
+                        builder: (context) => ContactModel(
+                              user: contatos,
+                              index: index,
+                            )),
                   );
                 },
                 leading: CircleAvatar(
+                  child: Text(
+                    contatos[index].nome[0],
+                    style: contatoAvatarFirstLetterName,
+                  ),
                   radius: 24,
                   backgroundColor: Colors.grey[400],
                 ),

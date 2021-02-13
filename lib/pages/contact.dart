@@ -6,7 +6,7 @@ import 'package:intl/intl.dart';
 class ContactModel extends StatelessWidget {
   final List<User> user;
   final int index;
-  ContactModel(this.user, this.index);
+  ContactModel({this.user, this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +23,12 @@ class ContactModel extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 120,
+                  child: Text(
+                    usuario.nome[0],
+                    style: TextStyle(
+                      fontSize: 40,
+                    ),
+                  ),
                 ),
                 SizedBox(height: 20),
                 Text(usuario.nome, style: contactNameAppBar),
@@ -33,7 +39,10 @@ class ContactModel extends StatelessWidget {
                   child: Card(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30)),
+                        borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(30),
+                      topRight: Radius.circular(30),
+                    )),
                     child: Container(
                       margin: EdgeInsets.all(10),
                       child: Column(

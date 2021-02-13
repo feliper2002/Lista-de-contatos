@@ -7,7 +7,7 @@ class ContatoService {
   int max = 50;
   var nome = ['Mário', 'Luigi', 'Wario', 'Peach', 'Filipe'];
   var sobreNome = ['Dias', 'Fernandes', 'Castro', 'Souza', 'Deschamps'];
-  var telefones = ['71 12345678', '71 11112222', '71 33334444', '71 55556666'];
+  var telefones = ['71 12345678', '11 11112222', '21 33334444', '33 55556666'];
   var emails = [
     'teste123@gmail.com',
     'dartteste123@gmail.com',
